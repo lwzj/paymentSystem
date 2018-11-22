@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 @RequestMapping("/test")
 //@RestController
@@ -18,8 +19,8 @@ public class TestController {
 
     @GetMapping("test")
     public String test(HttpServletRequest request) {
-        User user = userService.findOne();
-        request.setAttribute("user", user);
+        List<User> users = userService.findOne();
+        request.setAttribute("users", users);
         return "index";
     }
 }

@@ -5,7 +5,9 @@
     <title>Title</title>
 </head>
 <body>
-<span th:text="${user.address}"></span>
-<p th:text="${user.username}"></p>
+<tr th:each="user:${users}">
+<th th:text="${user.address}"></th>
+<th th:text="${user.username}"></th>
+</tr>
 </body>
 </html>
