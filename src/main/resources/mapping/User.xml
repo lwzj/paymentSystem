@@ -4,6 +4,9 @@
     <resultMap id="userResultMap" type="com.lwj.paymentsystem.model.User">
         <result column="username" property="username" jdbcType="VARCHAR"/>
         <result column="address" property="address" jdbcType="VARCHAR"/>
+        <result column="password" property="password" jdbcType="VARCHAR"/>
+        <result column="uid" property="uid" jdbcType="VARCHAR"/>
+        <result column="sex" property="sex" jdbcType="INTEGER"/>
     </resultMap>
     <select id="findAll" resultMap="userResultMap">
         select * from user
